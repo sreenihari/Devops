@@ -1,0 +1,10 @@
+POST cicdrepostat/_update/amh
+{
+  "script" : {
+    "source": "ctx._source.no_of_builds += params.count",
+    "lang": "painless",
+    "params" : {
+      "count" : 1
+    }
+  }
+}
